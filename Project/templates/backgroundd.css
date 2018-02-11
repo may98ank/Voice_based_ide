@@ -1,0 +1,7 @@
+@import "compass/css3";
+
+html {
+  min-height: 90%;
+  background: blue;
+  @include background-image(linear-gradient(transparent,white 140%), linear-gradient(left, transparent, navy, green, navy, transparent));
+}

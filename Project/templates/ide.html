@@ -1,0 +1,59 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styling.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.5/addons/p5.dom.js"></script>
+    <script src="p5.speech.js"></script>
+    <script src="comparision.js">
+    //  // new P5.SpeechRec object
+    //  var myRec = new p5.SpeechRec('en-IN');
+    // function setup()
+    // {
+    //     // graphics stuff:
+    //     myRec.onResult = showResult;
+    //     myRec.onEnd = end_it;
+    //     // var continuous = true;
+    //     // myRec.onResult = showResult;
+    //     function showResult()
+    //     {
+    //         var r = document.getElementById('text_editor');
+    //         if(myRec.resultValue==true) {
+    //             r.innerHTML += myRec.resultString;
+    //         }else{
+    //             r.innerHTML += myRec.resultString;
+    //         }
+    //     }
+    // }
+    // function start_listen() {
+    //     var continuous = true;
+    //     myRec.start(continuous);
+    //     var v = document.getElementById('heading');
+    //     v.innerHTML = "Speak......";
+    // }
+    // function end_it() {
+    //     var v = document.getElementById('heading');
+    //     v.innerHTML = "";
+    // }
+    // function onstop(){
+    //     var continuous = false;
+    //     myRec.start(continuous);
+    //     var v = document.getElementById('heading');
+    //     v.innerHTML = "";
+    // }
+
+</script>
+</head>
+<body>
+    <div>
+    <p id = "heading"></p>
+    <button id = "st_listen" type="start" class="btn" onclick="start_listen()">Start Talking</button>
+    <button id = "stop_listen" class="btn" type="end" onclick = "onstop()">Stop Talking</button>
+    <form action="{{url_for('run')}}" method="post">
+        <button type="submit" class="btn">Run</button>
+        <textarea name = "projectFilepath" id = "text_editor" style="margin: 0px; width: 1331px; height: 425px;"></textarea>
+    </form>
+    <button id="inp" class="btn" onclick = "take_inp()">Input</button>
+    <textarea id = "test_case" style="margin: 0px; width: 1332px; height: 115px;"></textarea>
+    </div>
+</body>
+</html>
